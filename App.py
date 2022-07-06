@@ -13,7 +13,7 @@ def index() :
         model2 = joblib.load('decision_tree')
         pred2 = model2.predict([[rates]])
 
-        return (render_template('index.html',result=pred1,result2=pred2))
+        return (render_template('index.html',result1=pred1,result2=pred2))
     else :
         return (render_template('index.html',result1='WAITING',result2='WAITING'))
     
